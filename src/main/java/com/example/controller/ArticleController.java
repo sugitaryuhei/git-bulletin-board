@@ -44,6 +44,9 @@ public class ArticleController {
 	
 	@Autowired
 	private CommentRepository commentRepository;
+	
+	@Autowired
+	private UserRepositor
 
 	/**
 	 * 2つのSQL文で掲示板画面を表示する.
@@ -64,6 +67,11 @@ public class ArticleController {
 	@RequestMapping("maintenance")
 	public String maintenance() {
 		return "error";
+	}
+	
+	@RequestMapping("/login")
+	public String login(LoginForm form) {
+		
 	}
 	
 	/**
