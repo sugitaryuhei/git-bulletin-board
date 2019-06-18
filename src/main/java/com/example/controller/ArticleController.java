@@ -74,6 +74,11 @@ public class ArticleController {
 		return "error";
 	}
 	
+	@RequestMapping("/toLogin")
+	public String toLogin() {
+		return "login";
+	}
+	
 	@RequestMapping("/login")
 	public String login(LoginForm form) {
 		
