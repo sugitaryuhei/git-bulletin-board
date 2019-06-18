@@ -72,7 +72,7 @@ public class ArticleController {
 	 * @return 掲示板画面
 	 */
 	@RequestMapping("")
-	public String index2(Model model) {
+	public String index(Model model) {
 		List<Article> articleList = articleRepository.findAll();
 		model.addAttribute("articleList", articleList);
 		return "article";
@@ -105,12 +105,12 @@ public class ArticleController {
 			                                        Model model) {
 		if(result.hasErrors()) {
 			model.addAttribute("selectedId", Integer.parseInt(form.getArticleId()));
-			return index2(model);
+			return index(model);
 		}
 		Comment comment = new Comment();
 		BeanUtils.copyProperties(form, comment);
 		comment.setArticleId(Integer.parseInt(form.getArticleId()));
-		commentRepository.insert(comment);
+		commentRepository.insertComment(comment);
 		return "redirect:/article";
 	}
 	
