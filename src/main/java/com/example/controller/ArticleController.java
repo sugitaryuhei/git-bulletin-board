@@ -128,4 +128,8 @@ public class ArticleController {
 		return "redirect:/article";
 	}
 	
+	public String test() {
+		return "test";
+	}
+	
 }
