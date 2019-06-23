@@ -53,6 +53,7 @@ public class ArticleController {
 	
 	
 
+	
 	/**
 	 * 2つのSQL文で掲示板画面を表示する.
 	 * 
