@@ -25,6 +25,7 @@ public class UserRepository {
 	
 	/**
 	 * メールアドレスからユーザー情報を取得.
+	 * hello world
 	 * 
 	 * @param mailAddress
 	 * @return
