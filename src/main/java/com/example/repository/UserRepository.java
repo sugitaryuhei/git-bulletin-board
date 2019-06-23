@@ -15,9 +15,6 @@ public class UserRepository {
 	@Autowired
 	private NamedParameterJdbcTemplate template;
 	
-	
-	
-	
 	private static final RowMapper<User> USER_ROW_MAPPER =(rs,i)->{
 		User user = new User();
 		user.setMailAddress(rs.getString("mail_address"));
